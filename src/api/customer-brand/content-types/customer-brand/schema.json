@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_brands",
+  "info": {
+    "singularName": "customer-brand",
+    "pluralName": "customer-brands",
+    "displayName": "Customer Brand"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
