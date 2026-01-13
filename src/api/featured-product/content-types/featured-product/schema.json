@@ -11,7 +11,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "product_image": {
+    "productImage": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -21,16 +21,16 @@
         "audios"
       ]
     },
-    "store_name": {
+    "storeName": {
       "type": "string"
     },
     "location": {
       "type": "string"
     },
-    "product_name": {
+    "productName": {
       "type": "string"
     },
-    "pixel_pitch": {
+    "pixelPitch": {
       "type": "string"
     },
     "dimensions": {

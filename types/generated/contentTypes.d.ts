@@ -483,13 +483,13 @@ export interface ApiFeaturedProductFeaturedProduct
     > &
       Schema.Attribute.Private;
     location: Schema.Attribute.String;
-    pixel_pitch: Schema.Attribute.String;
-    product_image: Schema.Attribute.Media<
+    pixelPitch: Schema.Attribute.String;
+    productImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    product_name: Schema.Attribute.String;
+    productName: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    store_name: Schema.Attribute.String;
+    storeName: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
