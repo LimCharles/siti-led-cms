@@ -460,6 +460,42 @@ export interface ApiCustomerBrandCustomerBrand
   };
 }
 
+export interface ApiFeaturedProductFeaturedProduct
+  extends Struct.SingleTypeSchema {
+  collectionName: 'featured_products';
+  info: {
+    displayName: 'Featured Product';
+    pluralName: 'featured-products';
+    singularName: 'featured-product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    dimensions: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::featured-product.featured-product'
+    > &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.String;
+    pixel_pitch: Schema.Attribute.String;
+    product_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    product_name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    store_name: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -971,6 +1007,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::customer-brand.customer-brand': ApiCustomerBrandCustomerBrand;
+      'api::featured-product.featured-product': ApiFeaturedProductFeaturedProduct;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
