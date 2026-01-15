@@ -1,24 +1,21 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "projects",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
-    "displayName": "Product"
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "productName": {
       "type": "string"
     },
-    "description": {
+    "locationName": {
       "type": "string"
-    },
-    "options": {
-      "type": "json"
     },
     "mainImage": {
       "type": "component",
